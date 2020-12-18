@@ -1,6 +1,6 @@
 # Web Scraping z Pythonem
 ## Lab 5
-Laboratorium miało na celu zapoznanie się z web scrapingiem z Pythonem.
+Laboratorium miało na celu zapoznanie się z web scrapingiem w Pythonie.
 
 W ramach laboratorium przeanalizowano kod z zajęć oraz stworzono aplikację Django wyszukującą elementy do scrapowania.
 
