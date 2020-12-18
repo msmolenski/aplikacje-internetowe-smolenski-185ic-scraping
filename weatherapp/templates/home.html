@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="refresh">
+        <script type="text/javascript">
+        </script>
+         
+        <title>Weather App</title>
+        <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #8FBC8F;
+        }
+
+        #main {
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        input[type='text'] {
+            width: 30%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 2px solid ;
+        }
+
+        input[type='submit'] {
+            width: 30%;
+            padding: 5px;
+            background: #2F4F4F;
+            color: white;
+            text-transform: uppercase;
+        }
+        form {
+            margin-bottom: 10px;
+        }
+    </style>
+    </head>
+    <body>
+
+    <div id="main">
+        <h2>Sprawdź pogodę w swoim mieście</h2>
+        <form method="GET">
+            <label for="city"></label>
+            </br>
+            <input type="text" name="city" id="city" value="{{ request.GET.city }}" placeholder="miasto...">
+            </br>
+            <input type="submit" value="Sprawdź">
+        </form>
+        {% if result %}
+        <h3>{{ result.region }}</h3>
+        <h3>{{ result.dayhour }}</h3>
+        <h3>{{ result.temp_now }} °C</h3>
+        <h3>{{ result.weather_now }}</h3>
+
+        {% endif %}
+    </div>
+    </body>
+</html>
